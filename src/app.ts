@@ -15,7 +15,10 @@ app.use(json())
 app.use(urlencoded({ extended: false }))
 app.use(morgan('dev'))
 
-connect('mongodb://localhost:27017/PetsApp')
+connect(
+  // 'mongodb://localhost:27017/PetsApp'
+  'mongodb+srv://nintendo:QaMzcGTlIBI4poL9@myfirstcluster.jfcnj.mongodb.net/PetsApp?retryWrites=true&w=majority'
+)
   .then((db) => {
     console.log('Conectado a mongodb')
   })
